@@ -1,0 +1,71 @@
+i<!DOCTYPE html>
+<html>
+	<head>
+		<title>ビブリオタイマー</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/css/play.css" />
+	</head>
+	<body>
+		<div id="loading">
+			<div class="spinner"></div>
+		</div>
+		<div id="cursorFollower"></div>
+		<div id="timer">
+			<h2>タイマー</h2>
+			<div id="biblioStatus"></div>
+			<div id="timerText">05:00</div>
+			<div id="statusText">スタートを押して開始</div>
+			<div id="button">
+				<button id="start" class="animationButton">スタート</button>
+				<button id="stop" class="animationButton">ストップ</button>
+				<button id="reset" class="animationButtonRed">リセット</button>
+				<button id="delete" class="animationButtonRed">記録削除</button>
+			</div>
+		</div>
+		<div class="settings">
+			<h2>設定</h2>
+			<div id="warning"></div>
+			<br />
+			<div id="discussion">
+				<h3>ディスカッション</h3>
+				<label class="rocker rocker-small">
+					<input type="checkbox" id="discussionBool" />
+					<span class="switch-left">あり</span>
+					<span class="switch-right">なし</span>
+				</label>
+			</div>
+			<div id="discussiontime">
+				<h3>ディスカッションタイム</h3>
+				<label class="rocker rocker-small">
+					<input type="checkbox" id="discussionTime" />
+					<span class="switch-left">2分</span>
+					<span class="switch-right">3分</span>
+				</label>
+			</div>
+			<br />
+			<div id="record">
+				<h3>録音</h3>
+				<label class="rocker rocker-small">
+					<input type="checkbox" id="recordCheckbox" />
+					<span class="switch-left">Yes</span>
+					<span class="switch-right">No</span>
+				</label>
+			</div>
+			<div id="transcribe">
+				<h3>文字起こし</h3>
+				<label class="rocker rocker-small">
+					<input type="checkbox" id="transcribeCheckbox" />
+					<span class="switch-left">Yes</span>
+					<span class="switch-right">No</span>
+				</label>
+			</div>
+			<br />
+			<div id="recordList"></div>
+			<div id="transcribeList"></div>
+		</div>
+	</body>
+	<script src="/js/index.js"></script>
+	<script src="/js/play.js"></script>
+</html>
