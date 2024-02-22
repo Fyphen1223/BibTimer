@@ -1,0 +1,286 @@
+h2 {
+	margin: 0% !important;
+	padding: 0%;
+	text-align: center;
+}
+
+#timerText {
+	margin-top: 0%;
+	font-size: 10em;
+	text-align: center;
+}
+
+button {
+	margin-top: 1%;
+	text-align: center;
+	border: none !important;
+	width: 100% !important;
+}
+#button {
+	text-align: center;
+}
+.animationButton {
+	position: relative;
+	display: inline-block;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 auto;
+	max-width: 220px;
+	padding: 10px 25px;
+	color: #313131;
+	transition: 0.3s ease-in-out;
+	font-weight: 600;
+	background: #eee;
+}
+.animationButton:hover {
+	background: #ebfcfe;
+	color: #6bb6ff;
+}
+.animationButton:before,
+.animationButton:after {
+	box-sizing: inherit;
+	content: '';
+	position: absolute;
+	border: 2px solid transparent;
+	width: 0;
+	height: 0;
+}
+.animationButton:before {
+	top: 0;
+	left: 0;
+}
+.animationButton:after {
+	bottom: 0;
+	right: 0;
+}
+.animationButton:hover:before,
+.animationButton:hover:after {
+	width: 100%;
+	height: 100%;
+}
+.animationButton:hover:before {
+	border-top-color: #6bb6ff;
+	border-right-color: #6bb6ff;
+	transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+}
+.animationButton:hover:after {
+	border-bottom-color: #6bb6ff;
+	border-left-color: #6bb6ff;
+	transition: border-color 0s ease-out 0.2s, width 0.15s ease-out 0.2s, height 0.15s ease-out 0.3s;
+}
+
+.animationButtonRed {
+	position: relative;
+	display: inline-block;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 auto;
+	max-width: 220px;
+	padding: 10px 25px;
+	color: #313131;
+	transition: 0.3s ease-in-out;
+	font-weight: 600;
+	background: #eee;
+}
+.animationButtonRed:hover {
+	background: #ebfcfe;
+	color: #6bb6ff;
+}
+.animationButtonRed:before,
+.animationButtonRed:after {
+	box-sizing: inherit;
+	content: '';
+	position: absolute;
+	border: 2px solid transparent;
+	width: 0;
+	height: 0;
+}
+.animationButtonRed:before {
+	top: 0;
+	left: 0;
+}
+.animationButtonRed:after {
+	bottom: 0;
+	right: 0;
+}
+.animationButtonRed:hover:before,
+.animationButtonRed:hover:after {
+	width: 100%;
+	height: 100%;
+}
+.animationButtonRed:hover:before {
+	border-top-color: #ef454a;
+	border-right-color: #ef454a;
+	transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+}
+.animationButtonRed:hover:after {
+	border-bottom-color: #ef454a;
+	border-left-color: #ef454a;
+	transition: border-color 0s ease-out 0.2s, width 0.15s ease-out 0.2s, height 0.15s ease-out 0.3s;
+}
+
+.rocker {
+	display: inline-block;
+	position: relative;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	color: #888;
+	width: 7em;
+	height: 4em;
+	overflow: hidden;
+	border-bottom: 0.5em solid #eee;
+	margin: 1%;
+}
+
+.rocker-small {
+	font-size: 0.75em;
+}
+
+.rocker::before {
+	content: '';
+	position: absolute;
+	top: 0.5em;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #999;
+	border: 0.5em solid #eee;
+	border-bottom: 0;
+}
+
+.rocker input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.switch-left,
+.switch-right {
+	cursor: pointer;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 2.5em;
+	width: 3em;
+	transition: 0.2s;
+}
+
+.switch-left {
+	height: 2.4em;
+	width: 2.75em;
+	left: 0.85em;
+	bottom: 0.4em;
+	background-color: #ddd;
+	transform: rotate(15deg) skewX(15deg);
+}
+
+.switch-right {
+	right: 0.5em;
+	bottom: 0;
+	background-color: #bd5757;
+	color: #fff;
+}
+
+.switch-left::before,
+.switch-right::before {
+	content: '';
+	position: absolute;
+	width: 0.4em;
+	height: 2.45em;
+	bottom: -0.45em;
+	background-color: #ccc;
+	transform: skewY(-65deg);
+}
+
+.switch-left::before {
+	left: -0.4em;
+}
+
+.switch-right::before {
+	right: -0.375em;
+	background-color: transparent;
+	transform: skewY(65deg);
+}
+
+input:checked + .switch-left {
+	background-color: #0084d0;
+	color: #fff;
+	bottom: 0px;
+	left: 0.5em;
+	height: 2.5em;
+	width: 3em;
+	transform: rotate(0deg) skewX(0deg);
+}
+
+input:checked + .switch-left::before {
+	background-color: transparent;
+	width: 3.0833em;
+}
+
+input:checked + .switch-left + .switch-right {
+	background-color: #ddd;
+	color: #888;
+	bottom: 0.4em;
+	right: 0.8em;
+	height: 2.4em;
+	width: 2.75em;
+	transform: rotate(-15deg) skewX(-15deg);
+}
+
+input:checked + .switch-left + .switch-right::before {
+	background-color: #ccc;
+}
+
+input:focus + .switch-left {
+	color: #333;
+}
+
+input:checked:focus + .switch-left {
+	color: #fff;
+}
+
+input:focus + .switch-left + .switch-right {
+	color: #fff;
+}
+
+input:checked:focus + .switch-left + .switch-right {
+	color: #333;
+}
+
+h3 {
+	margin: 1%;
+	display: block;
+}
+
+.settings {
+	margin-top: 2%;
+	text-align: center;
+}
+
+#record,
+#transcribe,
+#recordList,
+#transcribeList,
+#discussion,
+#discussiontime {
+	display: inline-block;
+	width: 30%;
+}
+
+#recordList {
+	text-align: center;
+}
+
+audio {
+	width: 50%;
+}
+
+#statusText {
+	margin-top: 1%;
+	font-size: 2em;
+	text-align: center;
+	margin-bottom: 2%;
+}
