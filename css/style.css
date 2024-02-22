@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@300&display=swap');
+
+html {
+	font-family: 'M PLUS 1', sans-serif !important;
+}
+
+h1 {
+	font-size: 300%;
+	text-align: center;
+	margin: 5% 20%;
+	padding: 20px 0;
+}
+
+#loading {
+	width: 100vw;
+	height: 100vh;
+	transition: all 1s;
+	background-color: #0bd;
+}
+.spinner {
+	width: 100px;
+	height: 100px;
+	margin: 200px auto;
+	background-color: #fff;
+	border-radius: 100%;
+	animation: sk-scaleout 1s infinite ease-in-out;
+}
+@keyframes sk-scaleout {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+#loading {
+	width: 100vw;
+	height: 100vh;
+	transition: all 1s;
+	background-color: #0bd;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+}
+
+.loaded {
+	opacity: 0;
+	visibility: hidden;
+}
+
+header {
+	padding: 20px;
+	color: #fff;
+	z-index: 200;
+}
+
+header nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+header nav ul a {
+	display: inline-block;
+	margin-right: 10px;
+	color: #000;
+}
+
+header nav ul a li {
+	color: #000;
+	text-decoration: none;
+	transition: 0.2s;
+}
+
+header nav ul a li:hover {
+	letter-spacing: 0.15em;
+}
+.container {
+	width: 250px;
+	height: 350px;
+	background: #2e517d;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0.4;
+}
+
+.cover {
+	width: 210px;
+	height: 100%;
+	position: fixed;
+	left: 40px;
+	background-color: red;
+	transform: rotateY(-10deg);
+	transform-style: preserve-3d;
+	transform-origin: left;
+	transition: all 0.5s ease-in;
+}
+
+.container:hover .cover {
+	transform: rotateY(-180deg);
+}
+
+#qa {
+	margin-top: 20%;
+}
+
+h2 {
+	font-size: 200%;
+	text-align: left;
+	margin: 5% 20%;
+	padding: 20px 0;
+}
+
+p {
+	font-size: 150%;
+	text-align: left;
+	margin: 5% 20%;
+	padding: 20px 0;
+}
+
+#verb {
+	display: inline;
+}
+
+body {
+	background-color: #fff9f0;
+}
+
+#cursorFollower {
+	display: none;
+	position: fixed;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: yellow;
+	pointer-events: none;
+	mix-blend-mode: multiply;
+	box-shadow: 0 0 20px yellow;
+	transition: transform 0.2s ease-out;
+	z-index: 100;
+}
